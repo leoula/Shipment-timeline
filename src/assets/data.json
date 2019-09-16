@@ -1,0 +1,46 @@
+
+   [ {
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "access_rights": [
+        {
+            "id": 22726,
+            "object_id": 7922,
+            "entity_id": 7,
+            "permission": "write",
+            "created_at": null,
+            "updated_at": null,
+            "entity": {
+                "id": 7,
+                "uuid_id": 251,
+                "name": "Dockflow Support Team",
+                "name_short": null,
+                "legal_form": null,
+                "registered_office_address_id": null,
+                "created_at": null,
+                "updated_at": null
+            }
+        },
+        {
+            "id": 22725,
+            "object_id": 7922,
+            "entity_id": 1269,
+            "permission": "write",
+            "created_at": null,
+            "updated_at": null,
+            "entity": {
+                "id": 1269,
+                "uuid_id": null,
+                "name": "AIESEC",
+                "name_short": null,
+                "legal_form": null,
+                "registered_office_address_id": null,
+                "created_at": "2019-09-09 13:16:16",
+                "updated_at": "2019-09-09 13:16:16"
+            }
+        }
+    ]
+    }
+  ]

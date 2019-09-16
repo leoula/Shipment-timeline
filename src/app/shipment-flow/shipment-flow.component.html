@@ -1,0 +1,233 @@
+<div class="container_inside_main">
+    <div class="row">
+        <div class="col-12 col-md-1 box">
+            <!-- <button _ngcontent-nqf-c2="" class="btn btn-outline-secondary"><i _ngcontent-nqf-c2=""
+                    class="fas fa-backward"></i> Back</button> -->
+        </div>
+        <div class="col-12 col-md-10 main-tab-container">
+
+
+
+
+            <div class="col-md-12">
+
+                
+                <div >
+                    <div class="row">
+                        <mat-card class="col-md-8">
+                            <mat-card-title>
+                                <mat-toolbar color="primary">
+                                    <span class="gap">
+                                        <h3><i class="fas fa-ship"></i> </h3>
+                                    </span>
+                                    <span class="gap">
+                                        <h2> Demo shipment</h2>
+                                    </span>
+
+                                    <span class="filler"></span>
+                                    <span class="gap" style="color: Dodgerblue;">
+                                        <h3><i class="fas fa-wifi"></i></h3>
+                                    </span>
+                                    <span class="gap" style="color: Dodgerblue;">
+                                        <h3><i class="fas fa-handshake"></i></h3>
+                                    </span>
+                                </mat-toolbar>
+                            </mat-card-title>
+                            <mat-card-content>
+                                <mat-accordion [class.mat-elevation-z2]="!isActive" [class.mat-elevation-z8]="isActive"  *ngFor="let sp of _shipmentsArray" >
+                                    <mat-expansion-panel style="position: relative">
+                                            <mat-expansion-panel-header *ngIf="!panelOpenState" 
+                                            [collapsedHeight]="customCollapsedHeight" [expandedHeight]="customExpandedHeight">
+                                            
+                                            </mat-expansion-panel-header>
+                                        <mat-list>
+                                            <mat-list-item>
+                                                   
+                                                   
+                                                    
+                                                <div class="progress-detail-container row">
+                                                    <div class="col-md-5 row" 
+                                                        style="background-color:#ededed;margin: 20px auto 20px auto;">
+                                                        <ul class="progress-detail col-md-7 ">
+                                                                <div class="row" >
+                                                                        <span class="col-md-1" style="margin:5px;"><i class="fas fa-ship"></i></span>
+                                                                        <li class="col-md-8"><small>Carrier</small><br><b>{{sp.sea_shipments[0].carrier.name}}</b></li>
+                                                                </div>
+                                                                <div class="row" >
+                                                                        <span class="col-md-1" style="margin:5px;"><i class="fas fa-file-alt"></i></span>
+                                                                        <li class="col-md-8"><small>B/L</small><br><b>{{sp.sea_shipments[0].bill_of_lading_reference}}</b></li>
+                                                                </div>
+                                                                <div class="row" >
+                                                                        <span class="col-md-1" style="margin:5px;"><i class="fas fa-edit"></i></span>
+                                                                        <li class="col-md-8"><small>Booking reference</small><br><b> {{sp.sea_shipments[0].booking_reference}}</b></li>
+                                                                </div>                     
+                                                                
+    
+                                                            </ul>
+                                                            <div class="col-md-5">
+                                                                <p><b>Departure</b> <br> 6 months ago</p>
+                                                                <p><b>Arrival</b><br> 5 months ago</p>
+                                                            </div>
+                                                    </div>
+                                                    <div class="col-md-5 row"
+                                                        style="background-color:#ededed;margin: 20px auto 20px 0px;">
+                                                        <ul class="progress-detail col-md-7 ">
+                                                            <div class="row" >
+                                                                    <span class="col-md-1" style="margin:5px;"><i class="fas fa-ship"></i></span>
+                                                                    <li class="col-md-8"><small>Carrier</small><br><b>
+                                                                        {{sp.sea_shipments[0].carrier.name}}
+                                                                       
+                                                                    </b></li>
+                                                            </div>
+                                                            <div class="row" >
+                                                                    <span class="col-md-1" style="margin:5px;"><i class="fas fa-file-alt"></i></span>
+                                                                    <li class="col-md-8"><small>B/L</small><br><b>
+                                                                            {{sp.sea_shipments[0].bill_of_lading_reference}}
+                                                                        
+                                                                    </b></li>
+                                                            </div>
+                                                            <div class="row" >
+                                                                    <span class="col-md-1" style="margin:5px;"><i class="fas fa-edit"></i></span>
+                                                                    <li class="col-md-8"><small>Booking reference</small><br><b>
+                                                                            {{sp.sea_shipments[0].booking_reference}}
+                                                                       
+                                                                    </b></li>
+                                                            </div>                     
+                                                            
+
+                                                        </ul>
+                                                        <div class="col-md-5">
+                                                            <p><b>Departure</b> <br> 4 months ago</p>
+                                                            <p><b>Arrival</b><br> 4 months ago</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </mat-list-item>
+                                        </mat-list>
+                                        <br>
+                                        <mat-list>
+                                            <mat-list-item>
+
+
+                                            </mat-list-item>
+                                        </mat-list>
+                                        <mat-list >
+                                            
+
+                                            <mat-list-item>
+
+                                                <div class="progress-bar-container" >
+                                                    <ul class="progress-bar" >
+                                                        <li><span style="color: Dodgerblue;">
+                                                                <i class="fas fa-map-marker-alt"></i> Pick-up 
+                                                            </span>
+                                                            <br>
+                                                           {{sp.sea_shipments[0].sea_movements[0].vessel_telo_loading.location.name}}
+                                                            <br>
+                                                            {{sp.sea_shipments[0].sea_movements[0].vessel_telo_loading.readings[0].reading}}
+
+                                                        </li>
+                                                        <li><span style="color: Dodgerblue;">
+                                                                <i class="fas fa-map-marker-alt"></i> Drop-off
+                                                            </span>
+                                                            <br>
+                                                            {{sp.sea_shipments[0].sea_movements[0].vessel_telo_discharge.location.name}}
+                                                            <!-- {{location.vessel_telo_discharge.location.name}} -->
+                                                            <br>
+                                                            {{sp.sea_shipments[0].sea_movements[0].vessel_telo_discharge.readings[0].reading}}
+                                                            <!-- {{time.event_date}} -->
+
+                                                        </li>
+                                                        <li><span style="color: Dodgerblue;">
+                                                                <i class="fas fa-map-marker-alt"></i> Pick-up 
+                                                            </span>
+                                                            <br>
+                                                            {{sp.sea_shipments[0].sea_movements[1].vessel_telo_loading.location.name}}
+                                                            <br>
+                                                            {{sp.sea_shipments[0].sea_movements[1].vessel_telo_loading.readings[0].reading}}
+
+                                                        </li>
+                                                        <li><span style="color: Dodgerblue;">
+                                                                <i class="fas fa-map-marker-alt"></i> Drop-off
+                                                            </span>
+                                                            <br>
+                                                            {{sp.sea_shipments[0].sea_movements[1].vessel_telo_discharge.location.name}}
+                                                             <br>
+                                                             {{sp.sea_shipments[0].sea_movements[1].vessel_telo_discharge.readings[0].reading}}
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </mat-list-item>
+
+                                        </mat-list>
+                                    </mat-expansion-panel>
+                                </mat-accordion>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="col-md-3">
+                            <mat-card>
+                                <mat-card-title>
+                                    <mat-toolbar color="primary">
+                                        <span class="gap">
+                                            <h2>Documents</h2>
+                                        </span>
+
+                                        <span class="filler"></span>
+                                        <span><i class="fas fa-plus"></i></span>
+
+                                    </mat-toolbar>
+                                </mat-card-title>
+                                <mat-card-content>
+                                    <mat-accordion [class.mat-elevation-z2]="!isActive"
+                                        [class.mat-elevation-z8]="isActive">
+                                        <mat-expansion-panel style="position: relative">
+                                            <mat-expansion-panel-header>Expansion 2</mat-expansion-panel-header>
+                                            <mat-list dense>
+                                                <mat-list-item>Item 1</mat-list-item>
+                                            </mat-list>
+                                        </mat-expansion-panel>
+                                    </mat-accordion>
+                                </mat-card-content>
+                            </mat-card>
+                            <mat-card>
+                                <mat-card-title>
+                                    <mat-toolbar color="primary">
+                                        <span class="gap">
+                                            <h2>Transport Units</h2>
+                                        </span>
+
+                                        <span class="filler"></span>
+                                        <span><i class="fas fa-plus"></i></span>
+
+                                    </mat-toolbar>
+                                </mat-card-title>
+                                <mat-card-content>
+                                    <mat-accordion [class.mat-elevation-z2]="!isActive"
+                                        [class.mat-elevation-z8]="isActive">
+                                        <mat-expansion-panel style="position: relative">
+                                            <mat-expansion-panel-header>Expansion 2</mat-expansion-panel-header>
+                                            <mat-list dense>
+                                                <mat-list-item>Item 1</mat-list-item>
+                                            </mat-list>
+                                        </mat-expansion-panel>
+                                    </mat-accordion>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+        <div class="col-12 col-md-1 box">
+            
+        </div>
+    </div>
+</div>

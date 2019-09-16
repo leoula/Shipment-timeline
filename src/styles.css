@@ -1,0 +1,7 @@
+/* Import globally material Icons */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body { 
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+  }

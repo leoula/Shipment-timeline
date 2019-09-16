@@ -1,0 +1,13 @@
+.toolbar {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00a0f7;
+    color: white;
+    font-weight: 600;
+  }
+
+  /* .mat-toolbar {
+    color: rgba(0,0,0,.87);
+} */
